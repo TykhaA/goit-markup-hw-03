@@ -328,19 +328,14 @@ ol {
     border: 1px solid var(--third-ligth-color);
 }
 
-.filter-button-active {
-    background-color: #404BBF;
+.filter-button:hover,
+.filter-button:focus {
+    background: var(--corp-color-hover);
     color: var(--primary-light-color);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
         0px 2px 1px 0px rgba(0, 0, 0, 0.08),
         0px 3px 1px 0px rgba(0, 0, 0, 0.10);
     border: 1px solid transparent;
-}
-
-.filter-button:hover,
-.filter-button:focus {
-    background: var(--corp-color-hover);
-    color: var(--primary-light-color);
 }
 
 .portfolio-page-list {
