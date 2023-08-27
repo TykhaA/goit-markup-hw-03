@@ -12,7 +12,7 @@
     --corp-color-hover: #404bbf;
 }
 
-/* base style */
+/* Reset */
 body {
     font-family: var(--primary-font);
     font-size: 16px;
@@ -20,6 +20,26 @@ body {
     letter-spacing: 0.02em;
     color: var(--color-text);
     background: var(--primary-light-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
 }
 
 .link {
@@ -31,12 +51,35 @@ body {
     list-style-type: none;
 }
 
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-bottom: 120px;
+}
+
 .section-title {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--primary-dark-color);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .main-banner-title,
@@ -90,6 +133,27 @@ body {
 
 .header {
     background-color: var(--primary-light-color);
+    border-bottom: 1px solid var(--third-ligth-color);
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .link {
+    padding: 24px 0;
+    display: block;
+}
+
+.header-nav {
+    display: flex;
+    gap: 76px;
+}
+
+.header-list {
+    display: flex;
+    gap: 40px;
 }
 
 .header-list-item,
@@ -126,15 +190,22 @@ body {
 .footer {
     background-color: var(--second-primary-color);
     color: var(--second-light-color);
+    padding: 101px 0 100px;
 }
 
 .footer .logo-acent {
     color: var(--second-light-color);
 }
 
+.footer .main-text {
+    max-width: 264px;
+    margin-top: 17.5px;
+}
+
 /* section main-banner  */
 .main-banner {
     background-color: var(--primary-dark-color);
+    padding: 186px 0 188px;
 }
 
 .main-banner-title {
@@ -143,6 +214,42 @@ body {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--primary-light-color);
+    max-width: 526px;
+    margin: 0 auto;
+}
+
+.main-banner-button {
+    margin: 48px auto;
+    display: block;
+    padding: 16px 32px;
+    border: none;
+}
+
+/* section studio */
+.studio {
+    padding-top: 120px;
+}
+
+.studio-list {
+    display: flex;
+    gap: 24px;
+}
+
+.studio-list-item {
+    width: calc((100% - 24px * 3)/4);
+}
+
+.studio-list-item .section-sub-title {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* section portfolio */
+
+.portfolio-list {
+    margin-top: 72px;
+    display: flex;
+    gap: 24px;
 }
 
 /* section contacts */
@@ -150,15 +257,48 @@ body {
     background-color: var(--second-light-color);
 }
 
+.contacts-wrap {
+    padding-top: 120px;
+}
+
+.contacts-list {
+    display: flex;
+    gap: 24px;
+    margin-top: 72px;
+}
+
 .contacts-item {
     text-align: center;
     background: var(--primary-light-color);
 }
 
+.contacts-list-info {
+    padding: 32px 0;
+    border-radius: 0px 0px 4px 4px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.contacts-list-info .section-sub-title {
+    margin-bottom: 8px;
+}
+
 /* section portfolio-page */
+.portfolio-page {
+    padding-top: 96px;
+}
 
 .portfolio-page-item .section-sub-title {
     text-align: left;
+}
+
+.filter {
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .filter-button {
@@ -168,10 +308,43 @@ body {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    border-radius: 4px;
+    padding: 12px 24px;
+    border: none;
+    border: 1px solid var(--cornflower, #E7E9FC);
+}
+
+.filter-button-active {
+    background-color: #404BBF;
+    color: var(--primary-light-color);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 2px 1px 0px rgba(0, 0, 0, 0.08),
+        0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+    border: 1px solid transparent;
 }
 
 .filter-button:hover,
 .filter-button:focus {
     background: var(--corp-color-hover);
     color: var(--primary-light-color);
+}
+
+.portfolio-page-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.portfolio-page-item {
+    width: calc((100% - 24px * 2) / 3);
+}
+
+.portfolio-page-item-info {
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower, #E7E9FC);
+    background: var(--white, #FFF);
+}
+
+.portfolio-page-item-info .section-sub-title {
+    margin-bottom: 8px;
 }
