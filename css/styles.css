@@ -239,7 +239,7 @@ ol {
 
 /* section studio */
 .studio {
-    padding: 120px 0 0;
+    padding: 120px 0;
 }
 
 .studio-list {
@@ -257,9 +257,6 @@ ol {
 }
 
 /* section portfolio */
-.portfolio {
-    padding: 120px 0;
-}
 
 .portfolio .section-title {
     margin-bottom: 72px;
@@ -273,10 +270,7 @@ ol {
 /* section contacts */
 .contacts {
     background-color: var(--second-light-color);
-}
-
-.contacts-wrap {
-    padding-top: 120px;
+    padding: 120px 0;
 }
 
 .contacts .section-title {
@@ -331,7 +325,6 @@ ol {
     letter-spacing: 0.04em;
     border-radius: 4px;
     padding: 12px 24px;
-    border: none;
     border: 1px solid var(--third-ligth-color);
 }
 
