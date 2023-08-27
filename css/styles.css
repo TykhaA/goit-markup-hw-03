@@ -104,6 +104,7 @@ ol {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--corp-color);
+    display: inline-block;
 }
 
 .logo-acent {
@@ -146,9 +147,13 @@ ol {
     display: block;
 }
 
+.header .logo {
+    margin-right: 76px;
+}
+
 .header-nav {
     display: flex;
-    gap: 76px;
+    align-items: center;
 }
 
 .header-list {
@@ -190,7 +195,7 @@ ol {
 .footer {
     background-color: var(--second-primary-color);
     color: var(--second-light-color);
-    padding: 101px 0 100px;
+    padding: 100px 0 100px;
 }
 
 .footer .logo-acent {
@@ -202,10 +207,14 @@ ol {
     margin-top: 17.5px;
 }
 
+.footer .logo {
+    margin-bottom: 16px;
+}
+
 /* section main-banner  */
 .main-banner {
     background-color: var(--primary-dark-color);
-    padding: 186px 0 188px;
+    padding: 188px 0 188px;
 }
 
 .main-banner-title {
@@ -214,7 +223,7 @@ ol {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--primary-light-color);
-    max-width: 526px;
+    max-width: 496px;
     margin: 0 auto;
 }
 
@@ -223,11 +232,14 @@ ol {
     display: block;
     padding: 16px 32px;
     border: none;
+    min-width: 169px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* section studio */
 .studio {
-    padding-top: 120px;
+    padding: 120px 0 0;
 }
 
 .studio-list {
@@ -245,9 +257,15 @@ ol {
 }
 
 /* section portfolio */
+.portfolio {
+    padding: 120px 0;
+}
+
+.portfolio .section-title {
+    margin-bottom: 72px;
+}
 
 .portfolio-list {
-    margin-top: 72px;
     display: flex;
     gap: 24px;
 }
@@ -261,20 +279,23 @@ ol {
     padding-top: 120px;
 }
 
+.contacts .section-title {
+    margin-bottom: 72px;
+}
+
 .contacts-list {
     display: flex;
     gap: 24px;
-    margin-top: 72px;
 }
 
 .contacts-item {
     text-align: center;
     background: var(--primary-light-color);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .contacts-list-info {
     padding: 32px 0;
-    border-radius: 0px 0px 4px 4px;
     background: var(--white, #FFF);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
         0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -311,7 +332,7 @@ ol {
     border-radius: 4px;
     padding: 12px 24px;
     border: none;
-    border: 1px solid var(--cornflower, #E7E9FC);
+    border: 1px solid var(--third-ligth-color);
 }
 
 .filter-button-active {
@@ -341,8 +362,9 @@ ol {
 
 .portfolio-page-item-info {
     padding: 32px 16px;
-    border: 1px solid var(--cornflower, #E7E9FC);
     background: var(--white, #FFF);
+    border: 1px solid var(--third-ligth-color);
+    border-top: none;
 }
 
 .portfolio-page-item-info .section-sub-title {
